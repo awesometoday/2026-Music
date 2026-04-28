@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>好森 2026 夏季班｜Music Together × Music Play</title>
-<meta name="description" content="好森 2026 夏季班開始招生！Music Together 親子音樂課、大童 STEAM 班、鍵盤班，2/26 開課，歡迎預約體驗。">
+<meta name="description" content="好森 2026 夏季班開始招生！Music Together 親子音樂課、大童 STEAM 班、鍵盤班，5/27 開課，歡迎預約體驗。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
@@ -18,12 +18,12 @@
 
 <style>
 :root {
-  --pink:        #e8778a;
-  --pink-light:  #fdf0f2;
-  --pink-mid:    #f5c8d0;
+  --pink:        #6e9fd4;
+  --pink-light:  #eef4fb;
+  --pink-mid:    #b8d3ee;
   --green:       #5a7a5f;
   --green-light: #edf3ee;
-  --cream:       #faf8f4;
+  --cream:       #f6f8fb;
   --warm:        #f5ede0;
   --text:        #2d2926;
   --muted:       #6b6560;
@@ -46,7 +46,7 @@ section + section { border-top: 1px solid var(--border); }
 
 /* ── HERO ── */
 .hero {
-  background: linear-gradient(160deg, #f9e8ec 0%, #fdf5f0 60%, #edf3ee 100%);
+  background: linear-gradient(160deg, #ddeaf8 0%, #eef4fb 60%, #edf3ee 100%);
   padding: 56px 20px 64px;
   text-align: center;
   position: relative;
@@ -58,7 +58,7 @@ section + section { border-top: 1px solid var(--border); }
   top: -60px; right: -60px;
   width: 200px; height: 200px;
   border-radius: 50%;
-  background: rgba(232,119,138,.12);
+  background: rgba(110,159,212,.12);
   pointer-events: none;
 }
 .hero::after {
@@ -147,14 +147,34 @@ section + section { border-top: 1px solid var(--border); }
   background: #fff;
   border: 1px solid var(--border);
   border-radius: var(--r);
-  padding: 20px 18px;
-  position: relative;
   overflow: hidden;
   transition: box-shadow .2s;
+  display: flex;
+  flex-direction: column;
 }
 .course-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,.08); }
 .course-card.pink-card { border-top: 3px solid var(--pink); }
 .course-card.green-card { border-top: 3px solid var(--green); }
+.course-img {
+  width: 100%; aspect-ratio: 4/3;
+  object-fit: cover; display: block;
+}
+.course-img-duo {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 2px; aspect-ratio: 4/3; overflow: hidden;
+}
+.course-img-duo img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+}
+.course-placeholder {
+  aspect-ratio: 4/3;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 28px;
+}
+.pink-card .course-placeholder { background: var(--pink-light); }
+.green-card .course-placeholder { background: var(--green-light); }
+.course-body { padding: 16px 16px 14px; flex: 1; display: flex; flex-direction: column; }
 .course-age {
   display: inline-block;
   font-size: 11px; font-weight: 500;
@@ -167,7 +187,7 @@ section + section { border-top: 1px solid var(--border); }
   font-family: var(--sans); font-size: 15px; font-weight: 500;
   color: var(--text); margin-bottom: 6px;
 }
-.course-card p { font-size: 13px; color: var(--muted); line-height: 1.7; }
+.course-card p { font-size: 13px; color: var(--muted); line-height: 1.7; flex: 1; }
 .course-card .who {
   font-size: 11px; color: var(--muted);
   margin-top: 10px; padding-top: 10px;
@@ -368,12 +388,12 @@ footer { text-align: center; padding: 24px 20px; font-size: 12px; color: var(--m
 ════════════════════════════════════════ -->
 <header class="hero">
   <div class="hero-badge">2026 夏季招生中</div>
-  <div class="hero-brand">好森 Awesome!</div>
+  <div class="hero-brand">好森 Awesome Today</div>
   <h1>音樂，是孩子<em>最早</em>的語言。</h1>
-  <div class="hero-theme">本季主題｜Kazoo ／ 森林裡的音樂魔法學院</div>
+  <div class="hero-theme">本季主題｜Kazoo ／ Roar！穿越時空的探險家</div>
   <div class="hero-dates">
     <span class="dot"></span>
-    春季開課 2/26（三）－ 5/16（六），共 10 週
+    夏季開課 5/27（二）－ 8/1（六），共 10 週
     <span class="dot"></span>
   </div>
   <div class="hero-btns">
@@ -453,7 +473,104 @@ footer { text-align: center; padding: 24px 20px; font-size: 12px; color: var(--m
       </div>
     </div>
 
-    <div class="stats">
+    <!-- 能力發展曲線圖 -->
+    <div style="margin-top:28px; background:#fff; border:1px solid var(--border); border-radius:var(--r); padding:20px 16px 16px; overflow:hidden;">
+      <div style="font-size:12px; font-weight:500; color:var(--muted); text-align:center; margin-bottom:4px; letter-spacing:.05em;">音樂基本能力達成率</div>
+      <svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+        <defs>
+          <linearGradient id="gradPotential" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#6e9fd4" stop-opacity="0.25"/>
+            <stop offset="100%" stop-color="#6e9fd4" stop-opacity="0.02"/>
+          </linearGradient>
+          <linearGradient id="gradActual" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#d4853a" stop-opacity="0.18"/>
+            <stop offset="100%" stop-color="#d4853a" stop-opacity="0.02"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Y軸格線 -->
+        <line x1="56" y1="20" x2="56" y2="210" stroke="#e8e8e8" stroke-width="1"/>
+        <line x1="56" y1="210" x2="580" y2="210" stroke="#e8e8e8" stroke-width="1"/>
+        <!-- 橫向虛線 -->
+        <line x1="56" y1="20"  x2="580" y2="20"  stroke="#f0f0f0" stroke-width="1" stroke-dasharray="4,4"/>
+        <line x1="56" y1="58"  x2="580" y2="58"  stroke="#f0f0f0" stroke-width="1" stroke-dasharray="4,4"/>
+        <line x1="56" y1="96"  x2="580" y2="96"  stroke="#f0f0f0" stroke-width="1" stroke-dasharray="4,4"/>
+        <line x1="56" y1="134" x2="580" y2="134" stroke="#f0f0f0" stroke-width="1" stroke-dasharray="4,4"/>
+        <line x1="56" y1="172" x2="580" y2="172" stroke="#f0f0f0" stroke-width="1" stroke-dasharray="4,4"/>
+
+        <!-- Y軸標籤 -->
+        <text x="48" y="24"  text-anchor="end" font-size="10" fill="#aaa">100%</text>
+        <text x="48" y="62"  text-anchor="end" font-size="10" fill="#aaa">80%</text>
+        <text x="48" y="100" text-anchor="end" font-size="10" fill="#aaa">60%</text>
+        <text x="48" y="138" text-anchor="end" font-size="10" fill="#aaa">40%</text>
+        <text x="48" y="176" text-anchor="end" font-size="10" fill="#aaa">20%</text>
+        <text x="48" y="214" text-anchor="end" font-size="10" fill="#aaa">0%</text>
+
+        <!-- X軸年齡標籤（0-9歲，每格58px） -->
+        <text x="56"  y="226" text-anchor="middle" font-size="10" fill="#aaa">0</text>
+        <text x="114" y="226" text-anchor="middle" font-size="10" fill="#aaa">1</text>
+        <text x="172" y="226" text-anchor="middle" font-size="10" fill="#aaa">2</text>
+        <text x="230" y="226" text-anchor="middle" font-size="10" fill="#aaa">3</text>
+        <text x="288" y="226" text-anchor="middle" font-size="10" fill="#aaa">4</text>
+        <text x="346" y="226" text-anchor="middle" font-size="10" fill="#aaa">5</text>
+        <text x="404" y="226" text-anchor="middle" font-size="10" fill="#aaa">6</text>
+        <text x="462" y="226" text-anchor="middle" font-size="10" fill="#aaa">7</text>
+        <text x="520" y="226" text-anchor="middle" font-size="10" fill="#aaa">8</text>
+        <text x="578" y="226" text-anchor="middle" font-size="10" fill="#aaa">9</text>
+        <text x="317" y="240" text-anchor="middle" font-size="10" fill="#aaa">年 紀</text>
+
+        <!-- 潛力發展區域填色（早期音樂刺激）-->
+        <!-- 曲線：0歲起快速上升，5歲達90% -->
+        <path d="M56,210 C114,200 145,140 172,96 C200,55 240,26 288,22 C346,20 404,20 462,20 C520,20 578,20 578,20 L578,210 Z"
+              fill="url(#gradPotential)"/>
+        <path d="M56,210 C114,200 145,140 172,96 C200,55 240,26 288,22 C346,20 404,20 462,20 C520,20 578,20 578,20"
+              fill="none" stroke="#6e9fd4" stroke-width="2.5" stroke-linecap="round"/>
+
+        <!-- 實際發展區域填色（一般發展）-->
+        <!-- 曲線：緩慢上升，9歲達60% -->
+        <path d="M56,210 C114,208 172,200 230,188 C288,174 346,154 404,136 C462,118 520,106 578,100 L578,210 Z"
+              fill="url(#gradActual)"/>
+        <path d="M56,210 C114,208 172,200 230,188 C288,174 346,154 404,136 C462,118 520,106 578,100"
+              fill="none" stroke="#d4853a" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6,3"/>
+
+        <!-- 90% 標注 -->
+        <circle cx="346" cy="20" r="4" fill="#6e9fd4"/>
+        <rect x="350" y="8" width="80" height="18" rx="4" fill="#6e9fd4"/>
+        <text x="390" y="20" text-anchor="middle" font-size="10" fill="#fff" font-weight="500">潛力 90%</text>
+
+        <!-- 60% 標注 -->
+        <circle cx="578" cy="100" r="4" fill="#d4853a"/>
+        <rect x="490" y="88" width="82" height="18" rx="4" fill="#d4853a"/>
+        <text x="531" y="100" text-anchor="middle" font-size="10" fill="#fff" font-weight="500">實際 60%</text>
+
+        <!-- 5歲分隔線 -->
+        <line x1="346" y1="20" x2="346" y2="210" stroke="#6e9fd4" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+        <text x="346" y="248" text-anchor="middle" font-size="9" fill="#6e9fd4" font-weight="500">5歲</text>
+
+        <!-- 底部課程區帶 -->
+        <!-- MT 親子共學 -->
+        <rect x="56" y="255" width="174" height="18" rx="4" fill="#eef4fb"/>
+        <text x="143" y="267" text-anchor="middle" font-size="9" fill="#6e9fd4" font-weight="500">MT 親子共學（0～5歲）</text>
+        <!-- Music Play 獨立探索 -->
+        <rect x="234" y="255" width="344" height="18" rx="4" fill="#fff3e8"/>
+        <text x="406" y="267" text-anchor="middle" font-size="9" fill="#d4853a" font-weight="500">Music Play 獨立探索（3～9歲）</text>
+      </svg>
+
+      <!-- 圖例 -->
+      <div style="display:flex; justify-content:center; gap:20px; margin-top:6px; flex-wrap:wrap;">
+        <div style="display:flex; align-items:center; gap:6px; font-size:12px; color:var(--muted);">
+          <div style="width:24px; height:3px; background:#6e9fd4; border-radius:2px;"></div>
+          <span>潛力發展（早期音樂刺激）</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:6px; font-size:12px; color:var(--muted);">
+          <div style="width:24px; height:0; border-top:3px dashed #d4853a;"></div>
+          <span>實際發展（一般情況）</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 數據卡 -->
+    <div class="stats" style="margin-top:12px;">
       <div class="stat-card">
         <div class="stat-num">90%</div>
         <div class="stat-label">從小接受音樂刺激的孩子，<br>5 歲前即可發展出完整音樂能力</div>
@@ -477,33 +594,63 @@ footer { text-align: center; padding: 24px 20px; font-size: 12px; color: var(--m
     <p class="section-sub">好森有兩個音樂品牌，一起陪孩子從 0 歲玩到 9 歲。</p>
 
     <div class="courses">
+
+      <!-- MT 寶寶班：兩張實景照 -->
       <div class="course-card pink-card">
-        <span class="course-age">出生後 ～ 8 個月</span>
-        <h3>MT 寶寶班</h3>
-        <p>音樂胎教的延伸，成為孩子人生第一位音樂玩伴。</p>
-        <div class="who">親子共同參與｜Music Together</div>
+        <div class="course-img-duo">
+          <img src="img-baby-1.jpg" alt="MT 寶寶班親子互動">
+          <img src="img-baby-2.jpg" alt="MT 寶寶班樂器探索">
+        </div>
+        <div class="course-body">
+          <span class="course-age">出生後 ～ 8 個月</span>
+          <h3>MT 寶寶班</h3>
+          <p>寶寶大腦的爆炸發展期，在音樂中儲存滿滿的能量，成為孩子人生第一個老師。</p>
+          <div class="who">親子共同參與｜Music Together</div>
+        </div>
       </div>
 
+      <!-- MT 混齡班：兩張實景照 -->
       <div class="course-card pink-card">
-        <span class="course-age">8 個月 ～ 5 歲</span>
-        <h3>MT 混齡班</h3>
-        <p>在滿滿音樂能量中，唱歌、律動、樂器探索，陪孩子成長茁壯。</p>
-        <div class="who">親子共同參與｜Music Together</div>
+        <div class="course-img-duo">
+          <img src="img-mixed-1.jpg" alt="MT 混齡班老師帶動">
+          <img src="img-mixed-2.jpg" alt="MT 混齡班樂器探索">
+        </div>
+        <div class="course-body">
+          <span class="course-age">8 個月 ～ 5 歲</span>
+          <h3>MT 混齡班</h3>
+          <p>在充滿音樂的環境中建立音樂基本能力，用唱歌、律動、樂器陪孩子成長茁壯。</p>
+          <div class="who">親子共同參與｜Music Together</div>
+        </div>
       </div>
 
+      <!-- 大童 STEAM 班：兩張實景照 -->
       <div class="course-card green-card">
-        <span class="course-age">3 ～ 8 歲</span>
-        <h3>大童 / STEAM 班</h3>
-        <p>在遊戲中發現創造力，用音樂探索世界的節奏，課後有手作點心時光。</p>
-        <div class="who">孩子獨立上課｜Music Play</div>
+        <div class="course-img-duo">
+          <img src="img-steam-1.jpg" alt="大童 STEAM 班手作成果">
+          <img src="img-steam-2.jpg" alt="大童 STEAM 班課堂互動">
+        </div>
+        <div class="course-body">
+          <span class="course-age">3 ～ 8 歲</span>
+          <h3>大童 / STEAM 班</h3>
+          <p>以音樂為主軸，動手做主題探索與實驗，在遊戲中發現創造力。</p>
+          <div class="who">孩子獨立上課｜Music Play</div>
+        </div>
       </div>
 
+      <!-- 大童 鍵盤班：兩張實景照 -->
       <div class="course-card green-card">
-        <span class="course-age">4 ～ 9 歲</span>
-        <h3>大童 / 鍵盤班</h3>
-        <p>從遊戲走向彈奏，培養專注與自信的音樂心，每人都有 10 分鐘一對一指導。</p>
-        <div class="who">孩子獨立上課｜Music Play</div>
+        <div class="course-img-duo">
+          <img src="img-piano-1.jpg" alt="大童鍵盤班團體課">
+          <img src="img-piano-2.jpg" alt="大童鍵盤班一對一引導">
+        </div>
+        <div class="course-body">
+          <span class="course-age">4 ～ 9 歲</span>
+          <h3>大童 / 鍵盤班</h3>
+          <p>從聆聽遊戲轉向理解彈奏，培養專注力與建立練習基礎，每堂安排一對一引導。</p>
+          <div class="who">孩子獨立上課｜Music Play</div>
+        </div>
       </div>
+
     </div>
 
     <p style="margin-top:16px; font-size:13px; color:var(--muted); text-align:center;">
@@ -518,8 +665,8 @@ footer { text-align: center; padding: 24px 20px; font-size: 12px; color: var(--m
 <section id="schedule">
   <div class="wrap">
     <div class="section-tag">開課時間</div>
-    <h2 class="section-title">2026 春季班時間表</h2>
-    <p class="section-sub">春季號 2/26－5/16，共 10 週，南區好森。</p>
+    <h2 class="section-title">2026 夏季班時間表</h2>
+    <p class="section-sub">夏季號 5/27－8/1，共 10 週，南區好森。</p>
 
     <div class="schedule-wrap">
 
@@ -544,12 +691,6 @@ footer { text-align: center; padding: 24px 20px; font-size: 12px; color: var(--m
           <span class="day-sub">南區好森</span>
         </div>
         <div class="time-rows">
-          <div class="time-row">
-            <span class="type-tag mt-tag">MT</span>
-            <span class="class-name">四 A</span>
-            <span class="time-str">09:50 – 10:40</span>
-            <span class="age-str">0 ～ 5 歲</span>
-          </div>
           <div class="time-row">
             <span class="type-tag mp-tag">STEAM</span>
             <span class="class-name">大童班</span>
@@ -625,7 +766,38 @@ footer { text-align: center; padding: 24px 20px; font-size: 12px; color: var(--m
         </div>
       </div>
 
+      <div class="day-block">
+        <div class="day-header">
+          <span class="day-label">每週日</span>
+          <span class="day-sub">南區好森 <span style="color:var(--pink);font-size:11px;font-weight:500;">NEW</span></span>
+        </div>
+        <div class="time-rows">
+          <div class="time-row">
+            <span class="type-tag mt-tag">MT</span>
+            <span class="class-name">日</span>
+            <span class="time-str">09:00 – 09:50</span>
+            <span class="age-str">0 ～ 5 歲</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-block">
+        <div class="day-header">
+          <span class="day-label">每週一</span>
+          <span class="day-sub">南區好森 <span style="color:var(--pink);font-size:11px;font-weight:500;">NEW</span></span>
+        </div>
+        <div class="time-rows">
+          <div class="time-row">
+            <span class="type-tag piano-tag">鍵盤</span>
+            <span class="class-name">鍵盤班</span>
+            <span class="time-str">18:00 – 19:00</span>
+            <span class="age-str">4 ～ 9 歲</span>
+          </div>
+        </div>
+      </div>
+
     </div>
+    <p style="margin-top:14px; font-size:12px; color:var(--muted);">＊新增時段將視招生結果後確認是否開班</p>
   </div>
 </section>
 
@@ -634,29 +806,31 @@ footer { text-align: center; padding: 24px 20px; font-size: 12px; color: var(--m
 ════════════════════════════════════════ -->
 <section class="mp-section">
   <div class="wrap">
-    <div class="section-tag">2026 春季主題</div>
-    <h2 class="section-title">森林裡的音樂魔法學院</h2>
-    <p class="section-sub">大童課程（STEAM 班 ＆ 鍵盤班）這一季走進魔法森林，在玩與聽之間，慢慢長出孩子的音樂力。</p>
+    <div class="section-tag">2026 夏季主題</div>
+    <h2 class="section-title">Roar！穿越時空的探險家</h2>
+    <p class="section-sub">大童課程（STEAM 班 ＆ 鍵盤班）這一季進入恐龍時代，一邊玩、一邊學，學習就發生在不知不覺。</p>
 
     <div class="mp-cards">
       <div class="mp-card">
         <span class="mp-badge">大童 STEAM 班｜3–8 歲</span>
-        <h3>音樂 × 遊戲 × 創造</h3>
-        <p>唱歌、打擊樂、創作，課後還有手作點心時光，讓孩子帶著滿足感回家。</p>
+        <h3>音樂 × 恐龍 × 探索</h3>
+        <p>以音樂為主軸，動手做主題探索與實驗。課後有手作點心時光，帶著滿足感回家。</p>
         <div class="mp-themes">
-          <span class="theme-chip">聲音召喚術</span>
-          <span class="theme-chip">音符解碼課</span>
-          <span class="theme-chip">節奏咒語練習</span>
+          <span class="theme-chip">恐龍主題手作</span>
+          <span class="theme-chip">化石音符挖掘</span>
+          <span class="theme-chip">腳印琴鍵探索</span>
+          <span class="theme-chip">聲音強弱對決</span>
         </div>
       </div>
 
       <div class="mp-card">
         <span class="mp-badge">大童鍵盤班｜4–9 歲</span>
-        <h3>從遊戲走向真正的彈奏</h3>
-        <p>透過音樂森林的故事，孩子學會節奏感、手型，以及停下來呼吸的音樂默契。</p>
+        <h3>從聆聽遊戲走向理解彈奏</h3>
+        <p>每個孩子學音樂節奏都不一樣，在好森我們不趕進度，而是陪孩子找到自己的步伐。每堂課皆安排一對一引導。</p>
         <div class="mp-themes">
-          <span class="theme-chip">琴鍵探路者訓練</span>
-          <span class="theme-chip">音符與拍號的關係</span>
+          <span class="theme-chip">無制式進度壓力</span>
+          <span class="theme-chip">團體中自然學習</span>
+          <span class="theme-chip">每堂一對一引導</span>
         </div>
       </div>
     </div>
@@ -671,18 +845,66 @@ footer { text-align: center; padding: 24px 20px; font-size: 12px; color: var(--m
     <div class="section-tag">早鳥優惠</div>
     <h2 class="section-title">早點報名，有驚喜。</h2>
 
-    <div class="earlybird">
-      <h3>🎁 早鳥有禮</h3>
-      <p>
-        1/23（五）前完成春季課程報名並全額繳費<br>
-        加贈 <strong>好森嚴選購物金 $300</strong><br>
-        可用來選購好森嚴選精選幼兒用品、兒童樂器、玩具
-      </p>
-      <p class="asterisk">
-        ＊限報名 10 堂以上方案，如已折抵堂數恕不適用<br>
-        ＊購物金以報名家庭計算，不得與其他優惠併用<br>
-        ＊春季購物金使用期限至 2026/5/31 止
-      </p>
+    <!-- MT 班 -->
+    <div style="background:var(--pink-light); border:1.5px solid var(--pink-mid); border-radius:var(--r); overflow:hidden; margin-bottom:12px;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0;">
+        <img src="img-gift-tshirt.png" alt="好森紀念T恤" style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block;">
+        <div style="padding:18px 16px; display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-size:11px; font-weight:500; color:var(--pink); background:#fff; display:inline-block; padding:2px 10px; border-radius:100px; margin-bottom:10px; width:fit-content;">🎽 MT 親子共學班</div>
+          <div style="font-family:var(--serif); font-size:16px; font-weight:600; color:var(--text); margin-bottom:8px; line-height:1.4;">早鳥報名<br>加贈紀念 T 恤</div>
+          <div style="font-size:13px; color:var(--muted); line-height:1.7;">
+            報名 10 堂以上並全額繳費<br>
+            原價 <strong style="color:var(--text);">$680</strong><br>
+            成人款 160–2XL<br>
+            兒童款 100–150
+          </div>
+          <div style="font-size:11px; color:var(--muted); margin-top:10px; padding-top:10px; border-top:1px dashed rgba(0,0,0,.1); line-height:1.7;">
+            ＊限 10 堂以上，如已折抵恕不適用<br>
+            ＊贈品以家庭計算，不得與其他優惠併用
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEAM 班 -->
+    <div style="background:#fff8f0; border:1.5px solid #f5d5b0; border-radius:var(--r); overflow:hidden; margin-bottom:12px;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0;">
+        <img src="img-gift-janod.jpg" alt="Janod 小恐龍磁鐵故事書" style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block;">
+        <div style="padding:18px 16px; display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-size:11px; font-weight:500; color:#d4853a; background:#fff; display:inline-block; padding:2px 10px; border-radius:100px; margin-bottom:10px; width:fit-content;">🦕 大童 STEAM 班</div>
+          <div style="font-family:var(--serif); font-size:16px; font-weight:600; color:var(--text); margin-bottom:8px; line-height:1.4;">早鳥報名<br>加贈磁鐵故事書</div>
+          <div style="font-size:13px; color:var(--muted); line-height:1.7;">
+            報名 10 堂以上並全額繳費<br>
+            法國 Janod｜小恐龍歷險記<br>
+            價值 <strong style="color:var(--text);">$399</strong>
+          </div>
+          <div style="font-size:11px; color:var(--muted); margin-top:10px; padding-top:10px; border-top:1px dashed rgba(0,0,0,.1); line-height:1.7;">
+            ＊限 10 堂以上，如已折抵恕不適用<br>
+            ＊商品照片僅供參考，以實物為準
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 鍵盤班 -->
+    <div style="background:#fff8f0; border:1.5px solid #f5d5b0; border-radius:var(--r); overflow:hidden;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0;">
+        <img src="img-gift-piano.webp" alt="五線譜學習磁鐵板" style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block; background:#fff;">
+        <div style="padding:18px 16px; display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-size:11px; font-weight:500; color:#d4853a; background:#fff; display:inline-block; padding:2px 10px; border-radius:100px; margin-bottom:10px; width:fit-content;">🎼 大童鍵盤班</div>
+          <div style="font-family:var(--serif); font-size:16px; font-weight:600; color:var(--text); margin-bottom:8px; line-height:1.4;">早鳥報名<br>加贈五線譜磁鐵板</div>
+          <div style="font-size:13px; color:var(--muted); line-height:1.7;">
+            報名 10 堂以上並全額繳費<br>
+            HAOSEN 豪聲樂器<br>
+            雙面五線譜學習磁鐵板<br>
+            價值 <strong style="color:var(--text);">$380</strong>
+          </div>
+          <div style="font-size:11px; color:var(--muted); margin-top:10px; padding-top:10px; border-top:1px dashed rgba(0,0,0,.1); line-height:1.7;">
+            ＊限 10 堂以上，如已折抵恕不適用<br>
+            ＊商品照片僅供參考，以實物為準
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
