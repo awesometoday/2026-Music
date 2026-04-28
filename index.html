@@ -378,6 +378,7 @@ footer { text-align: center; padding: 24px 20px; font-size: 12px; color: var(--m
   .time-row { flex-wrap: wrap; gap: 6px; }
   .time-row .age-str { margin-left: 0; }
   .stats { grid-template-columns: 1fr; }
+  .theme-3col { grid-template-columns: 1fr !important; }
 }
 </style>
 </head>
@@ -654,7 +655,7 @@ footer { text-align: center; padding: 24px 20px; font-size: 12px; color: var(--m
   <div class="wrap">
     <div class="section-tag">開課時間</div>
     <h2 class="section-title">2026 夏季班時間表</h2>
-    <p class="section-sub">夏季號 5/27－8/1，共 10 週，南區好森。</p>
+    <p class="section-sub">夏季號 5/27－8/1，共 10 週。</p>
 
     <!-- MT 親子共學 -->
     <div style="margin-top:24px;">
@@ -678,6 +679,9 @@ footer { text-align: center; padding: 24px 20px; font-size: 12px; color: var(--m
             </div>
           </div>
         </div>
+        <p style="font-size:12px; color:var(--muted); margin-top:-8px; margin-bottom:4px; padding-left:4px;">
+          ＊東區 One+ 地址：台南市東區長榮路一段89號 B1（府都 All in 1 大樓）
+        </p>
 
         <div class="day-block">
           <div class="day-header">
@@ -824,31 +828,54 @@ footer { text-align: center; padding: 24px 20px; font-size: 12px; color: var(--m
   <div class="wrap">
     <div class="section-tag">2026 夏季主題</div>
     <h2 class="section-title">Roar！穿越時空的探險家</h2>
-    <p class="section-sub">大童課程（STEAM 班 ＆ 鍵盤班）這一季進入恐龍時代，一邊玩、一邊學，學習就發生在不知不覺。</p>
+    <p class="section-sub">大童課程這一季進入恐龍時代，一邊玩、一邊學，學習就發生在不知不覺。</p>
 
-    <div class="mp-cards">
-      <div class="mp-card">
-        <span class="mp-badge">大童 STEAM 班｜3–8 歲</span>
-        <h3>音樂 × 恐龍 × 探索</h3>
-        <p>以音樂為主軸，動手做主題探索與實驗。課後有手作點心時光，帶著滿足感回家。</p>
-        <div class="mp-themes">
-          <span class="theme-chip">恐龍主題手作</span>
-          <span class="theme-chip">化石音符挖掘</span>
-          <span class="theme-chip">腳印琴鍵探索</span>
-          <span class="theme-chip">聲音強弱對決</span>
+    <div class="theme-3col" style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:24px;">
+
+      <!-- MT 親子共學 -->
+      <div class="mp-card" style="padding:0; overflow:hidden;">
+        <img src="img-theme-mt.jpg" alt="MT Kazoo 夏季教材" style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block;">
+        <div style="padding:14px 16px 16px;">
+          <span class="mp-badge" style="background:var(--pink-light); color:var(--pink);">MT 親子共學｜0–5 歲</span>
+          <h3 style="font-size:14px; margin-top:8px; margin-bottom:6px;">本季教材 Kazoo</h3>
+          <p style="font-size:12px;">音樂 × 陪伴，在滿滿音樂能量中，灌溉 0～5 歲的成長黃金期。</p>
+          <div class="mp-themes" style="margin-top:10px;">
+            <span class="theme-chip">唱歌律動</span>
+            <span class="theme-chip">樂器探索</span>
+            <span class="theme-chip">親子互動</span>
+          </div>
         </div>
       </div>
 
-      <div class="mp-card">
-        <span class="mp-badge">大童鍵盤班｜4–9 歲</span>
-        <h3>從聆聽遊戲走向理解彈奏</h3>
-        <p>每個孩子學音樂節奏都不一樣，在好森我們不趕進度，而是陪孩子找到自己的步伐。每堂課皆安排一對一引導。</p>
-        <div class="mp-themes">
-          <span class="theme-chip">無制式進度壓力</span>
-          <span class="theme-chip">團體中自然學習</span>
-          <span class="theme-chip">每堂一對一引導</span>
+      <!-- STEAM 班 -->
+      <div class="mp-card" style="padding:0; overflow:hidden;">
+        <img src="img-theme-steam.jpg" alt="大童 STEAM 班恐龍主題" style="width:100%; aspect-ratio:1/1; object-fit:cover; display:block;">
+        <div style="padding:14px 16px 16px;">
+          <span class="mp-badge">大童 STEAM 班｜3–8 歲</span>
+          <h3 style="font-size:14px; margin-top:8px; margin-bottom:6px;">音樂 × 恐龍 × 探索</h3>
+          <p style="font-size:12px;">動手做主題探索與實驗，課後有手作點心時光。</p>
+          <div class="mp-themes" style="margin-top:10px;">
+            <span class="theme-chip">恐龍主題手作</span>
+            <span class="theme-chip">化石音符挖掘</span>
+            <span class="theme-chip">聲音強弱對決</span>
+          </div>
         </div>
       </div>
+
+      <!-- 鍵盤班 -->
+      <div class="mp-card" style="padding:0; overflow:hidden;">
+        <img src="img-theme-piano.png" alt="大童鍵盤班" style="width:100%; aspect-ratio:1/1; object-fit:cover; object-position:center; display:block; background:#f5f5f5;">
+        <div style="padding:14px 16px 16px;">
+          <span class="mp-badge">大童鍵盤班｜4–9 歲</span>
+          <h3 style="font-size:14px; margin-top:8px; margin-bottom:6px;">從聆聽走向理解彈奏</h3>
+          <p style="font-size:12px;">不趕進度，陪孩子找到自己的步伐，每堂安排一對一引導。</p>
+          <div class="mp-themes" style="margin-top:10px;">
+            <span class="theme-chip">無制式進度壓力</span>
+            <span class="theme-chip">每堂一對一引導</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
